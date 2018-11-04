@@ -1,0 +1,166 @@
+/* Resete CSS*/
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-weight: 400;
+    line-height: 1.7;
+    color:  rgb(92, 89, 89);;
+    padding: 2.5em;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color:rgba(233, 227, 227, 0.062);
+}
+
+.header-galeria{    
+    background: linear-gradient(45deg, rgba(236, 26, 26, 0.7), 
+     rgb(238, 148, 23)
+     );
+    height: 40vh;
+    background-position: top;
+    background-size: cover;
+    border-radius: .5rem;
+}
+.galeria-box{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,10%);
+}
+
+
+.header-botao{
+    position: relative;
+    top: 30%;
+    left: 50%;  
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.secao-galeria{
+    background-size: cover;
+    background-position: top;
+}
+
+.btn-galeria:link,
+.btn-galeria:visited{
+    font-family: 'Niramit',sans-serif;
+    text-decoration: none;
+    padding: .5rem 3rem;
+    display: inline-block;
+    border-radius: 2rem;
+    transition: all .2s;
+    position: absolute;
+    font-size: 2rem;
+
+}
+
+.btn-galeria:hover{
+	color: rgba(243, 57, 57, 0.600);
+	box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+
+}
+
+.btn-galeria-active{
+	color: rgba(243, 57, 57, 0.600);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+.btn-galeria--white{
+	background-color:white;
+    color:#777;
+}
+
+.btn-galeria::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-galeria--white::after{
+    background-color: #fff;
+
+}
+
+.btn-galeria:hover::after{
+    transform: scaleX(1.2) scaleY(1.2);
+    opacity: 0;
+}
+
+
+
+.box-botao{
+    position: relative;
+    top: 50%;
+    left: 20%;
+}
+
+.titulo-galeria{
+    font-family: 'Niramit',sans-serif;
+    font-size: 10rem;
+    display: block;
+    letter-spacing: 2px;  
+    color: white;
+}
+
+.imagens-galeria{
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+}
+
+.footer{
+    margin-top: 2rem;
+    background-color:white;
+}
+
+.share{
+    font-family: 'Niramit',sans-serif;
+    font-size: 2.5rem;
+    margin-right: 4rem;
+    text-align: center;
+}
+
+.share::before{
+    content: url('../img/share1.png');
+    padding: 1rem;
+}
+
+.midias{
+    text-align: center;
+    margin-right: 2rem;
+    margin-top: .5rem;
+}
+
+.titulo-input{
+    font-size: 2rem;
+    font-family: 'Niramit',sans-serif;
+}
+.dados-input{
+    font-size: 1.5rem;
+    font-family: 'Niramit',sans-serif;
+}
+
+.ajuste-tamanho{
+    padding-bottom: 2.4rem;
+}
+
+
+
+.imagem-input::before{
+    content: url()
+}

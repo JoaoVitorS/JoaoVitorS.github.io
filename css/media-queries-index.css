@@ -1,0 +1,112 @@
+
+@media(max-width:375px){
+    .heading-primary--main{
+        display: block;
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: 1.5rem;
+        animation: moverdeBaixo 2s ease-out;
+    }
+    .heading-primary--sub{
+        display: block;
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: 1rem;
+        margin-top: .5em;
+        animation: moverdeCima 2s ease-out;
+        
+    }
+    .navegacao{
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+        padding:.5rem;
+        font-weight: 300;
+        list-style-type: none;
+    }
+
+    .header__text-box{
+        position: absolute;
+        top:  200%;
+        left: 50%;  
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
+    .produtos-header{
+        font-size: 4.5rem;
+        padding-top: 1rem;
+        color: rgba(0, 0, 0, 0.781);
+        margin-bottom: 6rem;
+    }
+    
+    .produtos-header::first-letter{
+        font-size: 130%;
+    }
+    
+    .produtos-header::after{
+        content: "";
+        display: block;
+        height: 4px;
+        width: 100px;
+        background-color: rgba(243, 57, 57, 0.600);
+        border-radius: 10rem;
+        margin: 0 auto;
+    
+    }
+    .ajuste{
+        padding-top: 2rem;
+    }
+
+    .titulo-quem-somos{
+        font-size: 4.5rem;
+        padding-top: 1rem;
+        color: rgba(0, 0, 0, 0.781);
+        margin-top: 2rem;
+        
+    }
+    .contato-trabalhe{
+        display: inline-block;
+        padding: 2rem 2rem;
+        font-size: 1.5rem;
+        text-align: end;
+    }
+
+    #contato{
+        margin-top: 6.5rem;
+    }
+    .contato-redes-sociais{
+        padding: .5rem;
+    }
+    .link-trabalhe{
+        display: inline-block;
+        font-size: 2.2rem;
+    
+    }
+    .link-contato{
+        display: inline-block;
+        font-size: 2.2rem;
+    }
+
+    .logo-rodape{
+        display: inline;
+        padding-bottom: 3rem;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

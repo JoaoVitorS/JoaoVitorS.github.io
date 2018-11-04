@@ -1,0 +1,433 @@
+/* Resete CSS*/
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+	font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgb(92, 89, 89);
+    padding: 2.5em;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color:rgba(233, 227, 227, 0.062);
+}
+
+
+.header{
+	height: 95vh;
+	background-image: linear-gradient(
+		to right bottom,
+    	rgba(231, 159, 58, 0.400),
+        rgba(94, 71, 38, 0.400)),
+	url(../img/header-cafe.jpg);
+	background-size: cover;
+	background-position: top;
+	position:relative;
+	clip-path: polygon(0 0 ,100% 0, 100% 77vh,0 100%);
+}
+
+.navegacao{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	flex-direction: row;
+	padding: 2rem .5rem;
+	list-style: none;
+}
+
+
+.nav-itens{
+	font-size: 2.3rem;
+	color: white;
+	margin-left: 20px;
+	text-decoration: none;
+	display: block;
+}
+
+.nav-itens:hover{
+	color:rgb(214, 87, 87);
+    text-decoration: none;    
+}
+
+.header-logo-box{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.header-logo{
+    height: 3rem;
+}
+
+.header__text-box{
+    position: absolute;
+    top: 350%;
+    left: 50%;  
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+
+.heading-primary{
+    color: #fff;
+    /*text-transform: uppercase;*/
+    backface-visibility: hidden; /*evitar bugs de tremores com animações*/
+    margin-bottom: 4rem;
+}
+
+.heading-primary--main{
+	display: block;
+	text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 400;
+	letter-spacing: 1.5rem;
+	animation: moverdeBaixo 2s ease-out;
+  
+}
+
+.heading-primary--sub{
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+	letter-spacing: 1rem;
+	margin-top: .5em;
+    animation: moverdeCima 2s ease-out;
+    
+}
+
+@keyframes moverdeBaixo{
+	0%{
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	50%{
+		transform: translateY(-10px);
+	}
+	100%{
+		transform: translate(0);
+	}
+}
+
+@keyframes moverdeCima{
+	0%{
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+	50%{
+		transform: translateY(10px);
+	}
+	100%{
+		transform: translate(0);
+	}
+}
+
+.btn1:link,
+.btn1:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 2rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+
+}
+
+.btn1:hover{
+	transform: translateY(-3px);
+	color: rgba(243, 57, 57, 0.600);
+	box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+
+}
+
+.btn1-active{
+	transform: translateY(-1px);
+	color: rgba(243, 57, 57, 0.600);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+.btn1--white{
+	background-color:white;
+    color:#777;
+}
+
+.btn1::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn1--white::after{
+    background-color: #fff;
+
+}
+
+.btn1:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn1--animated{
+    animation: moveInBottom 1.5s ease-out 1.5s;
+    animation-fill-mode: backwards;
+}   
+
+@keyframes moveInBottom{
+
+    0%{
+        opacity: 0;
+        transform: translateY(4rem);
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+/* Produtos */
+
+#produtos{
+    padding-top: 1rem; 
+    background-position: top;
+    background-size: cover;
+    margin-top: 2em;
+    
+}
+
+.produtos-header{
+    font-size: 5rem;
+    padding-top: 1rem;
+    color: rgba(0, 0, 0, 0.781);
+    margin-bottom: 6rem;
+}
+
+.produtos-header::first-letter{
+    font-size: 130%;
+}
+
+.produtos-header::after{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 280px;
+    background-color: rgba(243, 57, 57, 0.600);
+    border-radius: 10rem;
+    margin: 0 auto;
+
+}
+
+.ajuste{
+    padding-top: 6rem;
+}
+
+.ajuste-imagens{
+    padding-top: 3rem;
+}
+
+.titulo{
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 3rem;
+    
+}
+.img-cafes{
+    border-radius: 15%;
+    -webkit-filter:grayscale(90%);
+    transition: 0.7s;
+}
+.img-cafes:hover{
+    -webkit-filter:grayscale(0%);
+    transition: 0.7s;
+    transform: scale(1.1)
+}
+
+.text-informacoes{
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    padding: 2.5rem 2rem;
+}
+
+
+/*Quem somos*/
+
+#imagem{
+    margin-top: 2rem;
+    height: 85vh;
+    background-image: linear-gradient(
+		to right bottom,
+    	rgba(231, 159, 58, 0.400),
+        rgba(94, 71, 38, 0.400)),
+    url(../img/cafeteria.jpg);
+    -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+    position: relative;
+}
+
+
+/*Quem somos */
+
+#quem-somos{
+    position: relative;
+}
+.titulo-quem-somos{
+    font-size: 5rem;
+    padding-top: 1rem;
+    color: rgba(0, 0, 0, 0.781);
+    margin-top: 2rem;
+    
+}
+
+.sub-quem-somos{
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    padding: 1rem; 
+    margin-bottom: 2rem;
+
+}
+
+
+.box-quem-somos{
+   border-left: 4px solid rgba(243, 57, 57, 0.600);   
+   border-radius: .5rem;
+
+}
+
+.imagens{
+    border-radius: 20%;
+    margin-top: 5rem;
+
+}
+.box-texto{
+    font-size: 1.9rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    padding: 1rem;
+}
+
+
+#contato{
+    margin-top: 6.5rem;
+}
+
+/*Contato */    
+.contato-redes-sociais{
+    position: relative;
+    padding: 2rem 10rem;
+}
+
+.logo-rodape{
+    display: inline;
+    padding-right: 3rem;
+}
+
+.instagram{
+    display: inline;
+    font-size: 1.5rem;
+}
+
+.instagram::before{
+    content: url("../img/instagram.png");
+    display: inline;
+}
+
+.facebook{
+    display: inline;
+    font-size: 1.5rem;
+    padding-left: 2.5rem;
+}
+
+.facebook::before{
+
+    content: url("../img/facebook.png");
+    display: inline;
+
+}
+
+.twitter{
+    display:inline;
+    font-size: 1.5rem;
+    padding-left: 2.5rem;   
+}
+
+.twitter::before{
+    content: url("../img/twitter.png");
+}
+
+/*Trabalhe conosco */
+
+.contato-trabalhe{
+    display: inline-block;
+    padding: 3rem 10rem;
+    font-size: 1.5rem;
+    text-align: end;
+}
+
+.link-trabalhe{
+    display: inline-block;
+    font-size: 2.2rem;
+
+}
+.link-contato{
+    display: inline-block;
+    font-size: 2.2rem;
+}
+
+.link-pagina{
+    display: inline-block;
+    font-size: 2.2rem;
+    padding-left: 2.5rem;
+    color: inherit;
+}
+
+.link-pagina:hover{
+    text-decoration: none;
+    color: rgb(214, 87, 87);
+}
+.link-telefone{
+    display: inline-block;
+    font-size: 2.2rem;
+    padding-left: 2.5rem;
+    color: inherit;
+}
+
+.link-telefone:hover{
+    text-decoration: none;
+    color: rgb(214, 87, 87);
+}
+
+.rodape-info{
+    text-align: center;
+}
+
+.copyright{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+
+.endereco{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
